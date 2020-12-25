@@ -27,7 +27,6 @@ function DraggableWrapper({ children, id }) {
     setZIndex(1);
   }
   function onDrag(e, ui) {
-    console.log("Component ", id, " is dragged");
     const { x, y } = activeDrag.deltaPosition;
     setActiveDrag({
       ...activeDrag,
