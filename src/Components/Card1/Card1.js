@@ -10,7 +10,7 @@ import Divider from "@material-ui/core/Divider";
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: "33%",
+    maxWidth: "100%",
   },
   title: {
     fontWeight: "bold",

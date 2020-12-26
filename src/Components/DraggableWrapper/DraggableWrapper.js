@@ -3,10 +3,12 @@ import Draggable from "react-draggable";
 
 function DraggableWrapper({ children, id }) {
   const position = JSON.parse(localStorage.getItem(`component${id}`));
+
   let localPosition = { x: 0, y: 0 };
   if (position) {
     localPosition = { x: position.x, y: position.y };
   }
+
   const [activeDrag, setActiveDrag] = useState({
     activeDrags: 0,
     deltaPosition: {
@@ -14,17 +16,24 @@ function DraggableWrapper({ children, id }) {
       y: localPosition.y,
     },
   });
-  const [zIndex, setZIndex] = useState(0);
+
+  const [zInd, setZInd] = useState(0);
 
   const dragHandlers = { onStart: onStart, onStop: onStop, onDrag: onDrag };
 
   function onStart() {
+    const commonIndex = JSON.parse(localStorage.getItem("commonIndex"));
+    let localIndex = 0;
+    if (commonIndex) {
+      localIndex = commonIndex;
+    }
+    const saveGlobalIndex = localIndex + 1;
+    localStorage.setItem("commonIndex", JSON.stringify(saveGlobalIndex));
+    setZInd(saveGlobalIndex);
     setActiveDrag({ ...activeDrag, activeDrags: activeDrag.activeDrags + 1 });
-    setZIndex(1000);
   }
   function onStop() {
     setActiveDrag({ ...activeDrag, activeDrags: activeDrag.activeDrags - 1 });
-    setZIndex(1);
   }
   function onDrag(e, ui) {
     const { x, y } = activeDrag.deltaPosition;
@@ -35,6 +44,7 @@ function DraggableWrapper({ children, id }) {
         y: y + ui.deltaY,
       },
     });
+
     localStorage.setItem(
       `component${id}`,
       JSON.stringify({ x: x + ui.deltaX, y: y + ui.deltaY })
@@ -49,7 +59,7 @@ function DraggableWrapper({ children, id }) {
         y: activeDrag.deltaPosition.y,
       }}
     >
-      {children}
+      <div style={{ position: "relative", zIndex: zInd }}>{children}</div>
     </Draggable>
   );
 }

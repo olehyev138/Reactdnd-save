@@ -7,8 +7,7 @@ import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: "33%",
-    maxHeight: 100,
+    maxWidth: "100%",
   },
   title: {
     fontWeight: "bold",

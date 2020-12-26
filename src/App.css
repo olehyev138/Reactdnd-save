@@ -13,3 +13,7 @@
 .react-draggable {
   position: relative;
 }
+
+.react-draggable-dragging {
+  z-index: 10;
+}
