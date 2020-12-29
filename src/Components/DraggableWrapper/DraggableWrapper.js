@@ -22,6 +22,7 @@ function DraggableWrapper({ children, id }) {
   const dragHandlers = { onStart: onStart, onStop: onStop, onDrag: onDrag };
 
   function onStart() {
+    console.log("Start");
     const commonIndex = JSON.parse(localStorage.getItem("commonIndex"));
     let localIndex = 0;
     if (commonIndex) {
@@ -33,9 +34,11 @@ function DraggableWrapper({ children, id }) {
     setActiveDrag({ ...activeDrag, activeDrags: activeDrag.activeDrags + 1 });
   }
   function onStop() {
+    console.log("Stop");
     setActiveDrag({ ...activeDrag, activeDrags: activeDrag.activeDrags - 1 });
   }
   function onDrag(e, ui) {
+    console.log("Drag");
     const { x, y } = activeDrag.deltaPosition;
     setActiveDrag({
       ...activeDrag,
