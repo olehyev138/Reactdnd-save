@@ -7,38 +7,17 @@ function Card1({ classes }) {
   const [isFlipped, setIsFlipped] = useState(false);
   return (
     <div className="card">
-      <div
-        className="card__section"
-        style={{height: "500px"}}
-        onMouseLeave={() => setIsFlipped(false)}
-      >
+      <div className="card__section" style={{height: "500px"}} onMouseLeave={() => setIsFlipped(false)}>
         <h2>Events You've Joined</h2>
         <a className="card__action" href="#">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            enable-background="new 0 0 24 24"
-            className="icon card__icon"
-          >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" enable-background="new 0 0 24 24" className="icon card__icon">
             <path d="M20 5h-2V2h-2v3H8V2H6v3H4c-1.1 0-2 .9-2 2v13c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zM4 10V7h16v3H4z"></path>
           </svg>
           <span style={{fontSize: "18"}}>Events Calendar</span>
         </a>
-        <ReactCardFlip
-          isFlipped={isFlipped}
-          flipDirection="horizontal"
-        >
-          <div
-            className="front"
-            onMouseEnter={() => setIsFlipped((prev) => !prev)}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="20px"
-              viewBox="-8 0 512 512.00038"
-              width="20px"
-              className="live__streaming"
-            >
+        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+          <div className="front" onMouseEnter={() => setIsFlipped((prev) => !prev)}>
+            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="-8 0 512 512.00038" width="20px" className="live__streaming" style={{backfaceVisibility: "hidden"}}>
               <title style={{backfaceVisibility: "hidden"}}>ongoing virtual event</title>
               <path d="m445.484375 239.261719h-395.394531c-27.621094 0-50.089844 22.46875-50.089844 50.089843v172.5625c0 27.617188 22.46875 50.085938 50.089844 50.085938h395.394531c27.621094 0 50.089844-22.46875 50.089844-50.085938v-172.5625c0-27.621093-22.46875-50.089843-50.089844-50.089843zm20.089844 222.652343c0 11.074219-9.011719 20.085938-20.089844 20.085938h-395.394531c-11.078125 0-20.089844-9.011719-20.089844-20.085938v-172.5625c0-11.078124 9.011719-20.089843 20.089844-20.089843h395.394531c11.078125 0 20.089844 9.011719 20.089844 20.089843zm0 0" style={{backfaceVisibility: "hidden"}}></path>
               <path d="m247.828125 160.640625c11.917969 0 23.835937-4.527344 32.910156-13.585937 8.800781-8.78125 13.644531-20.460938 13.644531-32.886719s-4.84375-24.105469-13.644531-32.886719c-18.148437-18.113281-47.675781-18.113281-65.824219 0-8.800781 8.78125-13.644531 20.460938-13.644531 32.886719s4.84375 24.105469 13.644531 32.886719c9.074219 9.058593 20.992188 13.585937 32.914063 13.585937zm-11.722656-58.128906c3.234375-3.226563 7.476562-4.835938 11.722656-4.835938 4.242187 0 8.484375 1.613281 11.714844 4.835938 3.121093 3.113281 4.839843 7.253906 4.839843 11.65625 0 4.402343-1.71875 8.539062-4.835937 11.65625-6.464844 6.449219-16.976563 6.445312-23.441406 0-3.121094-3.117188-4.835938-7.253907-4.835938-11.65625 0-4.402344 1.71875-8.539063 4.835938-11.65625zm0 0" style={{backfaceVisibility: "hidden"}}></path>
@@ -51,34 +30,22 @@ function Card1({ classes }) {
               <path d="m373.339844 114.167969c0 33.445312-13.050782 64.894531-36.75 88.546875-5.863282 5.851562-5.875 15.351562-.023438 21.214844 2.933594 2.933593 6.773438 4.402343 10.617188 4.402343 3.835937 0 7.667968-1.460937 10.597656-4.382812 29.378906-29.320313 45.558594-68.308594 45.558594-109.78125 0-41.46875-16.179688-80.460938-45.558594-109.78125-5.863281-5.851563-15.359375-5.84375-21.214844.019531-5.851562 5.863281-5.839844 15.363281.023438 21.214844 23.699218 23.652344 36.75 55.097656 36.75 88.546875zm0 0" style={{backfaceVisibility: "hidden"}}></path>
               <path d="m148.390625 228.332031c3.84375 0 7.6875-1.46875 10.617187-4.402343 5.851563-5.863282 5.84375-15.363282-.023437-21.214844-23.699219-23.652344-36.75-55.101563-36.75-88.550782 0-33.445312 13.050781-64.894531 36.75-88.546874 5.863281-5.851563 5.875-15.351563.023437-21.210938-5.855468-5.867188-15.351562-5.875-21.214843-.023438-29.378907 29.324219-45.558594 68.3125-45.558594 109.78125 0 41.472657 16.179687 80.460938 45.558594 109.785157 2.929687 2.921875 6.761719 4.382812 10.597656 4.382812zm0 0" style={{backfaceVisibility: "hidden"}}></path>
             </svg>
-            <img
-              src={remote_meeting}
-              alt="Remote meeting icon"
-              width="20"
-              height="20"
-              style={{backfaceVisibility: "hidden"}}
-            />
-            <img
-              width="100%"
-              alt=""
-              src={chinese}
-              style={{backfaceVisibility: "hidden"}}
-            />
+            <img src={remote_meeting} alt="Remote meeting icon" width="20" height="20" style={{backfaceVisibility: "hidden"}} />
+            <img width="100%" alt="" src={chinese} style={{backfaceVisibility: "hidden"}} />
             <p style={{backfaceVisibility: "hidden"}}>
               <a href="https://testing.diverst.com/groups/93/events/86" style={{backfaceVisibility: "hidden"}}>Chinese New Year Celebration</a>
             </p>
           </div>
 
-          <div
-            className="back"
-            onMouseLeave={() => setIsFlipped((prev) => !prev)}
-          >
+          <div className="back" onMouseLeave={() => setIsFlipped((prev) => !prev)}>
             <span className="highlight" style={{backfaceVisibility: "hidden"}}>
-              <a href="https://testing.diverst.com/groups/93/events/86" style={{backfaceVisibility: "hidden"}}>Chinese New Year Celebration</a>
+              <a href="https://testing.diverst.com/groups/93/events/86" style={{backfaceVisibility: "hidden"}}>
+                Chinese New Year Celebration
+              </a>
             </span>
             <br style={{backfaceVisibility: "hidden"}} />
             <small style={{paddingLeft: "12px", backfaceVisibility: "hidden"}}>
-              The Asian Pacific Americans&nbsp; invite&nbsp; you to an exclusive Chinese Lunar New Year ce...
+              The Asian Pacific Americans&nbsp;invite&nbsp;you to an exclusive Chinese Lunar New Year ce...
             </small>
             <br style={{backfaceVisibility: "hidden"}} />
             <small className="muted" style={{backfaceVisibility: "hidden"}}>08/07/2020</small>

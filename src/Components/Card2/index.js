@@ -11,7 +11,7 @@ function Card2({ classes }) {
             <div className="flex-row flex-row--middle">
                 <div className="flex-row__cell flex-row__cell--grow">
                   <h3 className="highlight" style={{marginBottom: "0"}}>
-                    <a className="underline_text" href="https://testing.diverst.com/groups/93/messages/212" >Stay Connected Every Day!</a>
+                    <a className="underline_text" href="https://testing.diverst.com/groups/93/messages/212">Stay Connected Every Day!</a>
                   </h3>
                   <small>
                     <p>While we are working from home, please check Slack or this space for any updates.</p>
@@ -29,18 +29,11 @@ function Card2({ classes }) {
 
           <div className="row block-section-news">
             <div className="col-xs-4">
-                <div
-                  id="news_link_carousel_c01c2d1f29c575613b1359da51918935"
-                  className="carousel slide"
-                  data-ride="carousel">
+                <div id="news_link_carousel_c01c2d1f29c575613b1359da51918935" className="carousel slide" data-ride="carousel">
                   <div className="carousel-inner" role="listbox">
                     <div className="item active">
                       <a data-remote="true" data-method="get" href="https://testing.diverst.com/groups/95/news_links/218/news_link_photos">
-                        <img
-                          alt=""
-                          className="img-responsive center-block"
-                          src={Recruiting}
-                        />
+                        <img alt="" className="img-responsive center-block" src={Recruiting} />
                       </a>
                     </div>
                   </div>
@@ -61,8 +54,8 @@ function Card2({ classes }) {
                 </div>
             </div>
             <div className="modal fade" id="myModal">
-                <div className="modal-dialog">
-                  <div className="modal-content">
+                <div className="modal-dialog" style={{width: "65%", height: "65%"}}>
+                  <div className="modal-content" style={{height: "auto", minHeight: "100%",borderRadius: "0"}}>
                   </div>
                 </div>
             </div>
@@ -71,7 +64,7 @@ function Card2({ classes }) {
             <div className="flex-row flex-row--middle">
                 <div className="flex-row__cell flex-row__cell--grow">
                   <h3 className="highlight" style={{marginBottom: "0"}}>
-                    <a className="underline_text" href="https://testing.diverst.com/groups/95/messages/208" >Upcoming Workshop on Ablism </a>
+                    <a className="underline_text" href="https://testing.diverst.com/groups/95/messages/208">Upcoming Workshop on Ablism </a>
                   </h3>
                   <small>
                       <p>We are planning a workshop to understand and deconstuct Ablism in the workplace.</p>
@@ -88,23 +81,8 @@ function Card2({ classes }) {
             </div>
           </div>
           <div className="embedly-card">
-            <div
-              className="embedly-card-hug"
-              style={{
-                maxWidth: "600px",
-                padding: "0",
-                position: "relative",
-                minWidth: "200px",
-                margin: "5px auto"
-              }}
-            >
-                <div className="embdscl0">
-                  <a className="embd-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftesting.diverst.com%2Fuser%23e.s48rup.t8bqee"><i></i></a>
-                  <a className="embd-twitter" href="https://twitter.com/intent/tweet?text=HEBN%20-%20LBFO%20Resistire%202020%20with%20VP%20Ofelia%20Melendrez-Kumpf%20Intro&amp;url=https%3A%2F%2Ftesting.diverst.com%2Fuser%23e.s48rup.t8bqee&amp;via=embedly"><i></i></a>
-                  <a className="embd-pinterest" href="https://www.pinterest.com/pin/create/button/?description=HEBN%20-%20LBFO%20Resistire%202020%20with%20VP%20Ofelia%20Melendrez-Kumpf%20Intro&amp;media=https%3A%2F%2Fi.ytimg.com%2Fvi%2F2H8ZEmbL4hk%2Fhqdefault.jpg&amp;url=https%3A%2F%2Ftesting.diverst.com%2Fuser%23e.s48rup.t8bqee"><i></i></a>
-                  <a className="embd-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Ftesting.diverst.com%2Fuser%23e.s48rup.t8bqee"><i></i></a>
-                  <a className="embd-card"><i></i></a>
-                </div>
+            <div className="embedly-card-hug" style={{maxWidth: "600px", padding: "0", position: "relative", minWidth: "200px", margin: "5px auto"}}>
+                <div className="embdscl0"><a className="embd-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftesting.diverst.com%2Fuser%23e.s48rup.t8bqee"><i></i></a><a className="embd-twitter" href="https://twitter.com/intent/tweet?text=HEBN%20-%20LBFO%20Resistire%202020%20with%20VP%20Ofelia%20Melendrez-Kumpf%20Intro&amp;url=https%3A%2F%2Ftesting.diverst.com%2Fuser%23e.s48rup.t8bqee&amp;via=embedly"><i></i></a><a className="embd-pinterest" href="https://www.pinterest.com/pin/create/button/?description=HEBN%20-%20LBFO%20Resistire%202020%20with%20VP%20Ofelia%20Melendrez-Kumpf%20Intro&amp;media=https%3A%2F%2Fi.ytimg.com%2Fvi%2F2H8ZEmbL4hk%2Fhqdefault.jpg&amp;url=https%3A%2F%2Ftesting.diverst.com%2Fuser%23e.s48rup.t8bqee"><i></i></a><a className="embd-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Ftesting.diverst.com%2Fuser%23e.s48rup.t8bqee"><i></i></a><a className="embd-card"><i></i></a></div>
             </div>
           </div>
       </div>
